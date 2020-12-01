@@ -1,0 +1,7 @@
+{
+  "name": "YRecipes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
