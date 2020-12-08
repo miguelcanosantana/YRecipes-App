@@ -27,3 +27,13 @@ This App is made in Ionic, it allows you to:
 * Set the time spent making them, the difficulty, if they are plant based.
 * Track how much of them you did.
 * Have a Chef Score to motivate you! :D.
+
+<!-- ABOUT THE App -->
+## Usage of the App
+This App is made in Ionic, it allows you to:
+* Create and Edit Recipes.
+* Set the time spent making them, the difficulty, if they are plant based.
+* Track how much of them you did.
+* Have a Chef Score to motivate you! :D.
+
+<img src="media/logo.svg" alt="Logo" width="200" height="200">
