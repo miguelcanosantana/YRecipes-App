@@ -1,9 +1,81 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title class="ion-text-center">Profile</ion-title>
+    <ion-title class="ion-text-center">Stats</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
+
+  <!-- Title -->
+  <ion-item class="customInput" lines="none" color="tertiary">
+    <ion-icon slot="start" name="trophy"></ion-icon>
+    <ion-label class="ion-text-center"><b>Your Chef Level!</b></ion-label>
+    <ion-icon slot="end" name="trophy"></ion-icon>
+  </ion-item>
+
+  <div class="space"></div>
+
+  <!-- Level -->
+  <ion-item class="customInput" lines="none" color="tertiary">
+    <ion-label class="level ion-text-center">{{ this.level }}</ion-label>
+  </ion-item>
+
+  <div class="space"></div>
+
+  <!-- Exp -->
+  <ion-item class="customInput" lines="none" color="tertiary">
+    <ion-label class="exp ion-text-center" >{{ this.exp }} exp</ion-label>
+    <ion-button (click)="this.calculateScore()" color="warning" shape="round">
+      <b>Calculate!</b>
+    </ion-button>
+  
+  </ion-item>
+
+  
+  <div class="space"></div>
+
+  <!-- How Calculated -->
+  <ion-item class="customInput" lines="none" color="tertiary">
+
+    <ion-label class="ion-text-center">
+      <br>
+      <b>How is your level calculated?</b><br><br><br>
+
+      Your chef level is based on some things like: <br><br>
+
+      <!-- List of Text Items -->
+      <ion-list>
+
+        <ion-item>
+          <ion-label class="ion-text-center">How much recipes have you done</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="ion-text-center">How much times have you done a recipe</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="ion-text-center">Never done recipes won't count</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="ion-text-center">Easy level recipe will not multiply exp value</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="ion-text-center">Normal level recipe will multiply exp x 1.5</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-label class="ion-text-center">Hard level recipe will multiply exp x 2</ion-label>
+        </ion-item>
+
+      </ion-list>
+    
+    </ion-label>
+
+  </ion-item>
+
+  
 
 </ion-content>

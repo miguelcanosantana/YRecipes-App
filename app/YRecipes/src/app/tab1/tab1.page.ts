@@ -13,7 +13,6 @@ export class Tab1Page {
 
   //List of recipes
   recipesList: Recipe[] = [];
-
   
   constructor(
     //Use RecipeService from the Services folder
@@ -22,7 +21,12 @@ export class Tab1Page {
     public alertController: AlertController,
     //Router
     private router: Router
-  ) {
+  ) {}
+
+  //Using ionViewDidEnter avoids unpredictable behaviour
+  //And fixes recipes managing
+  //https://ionicframework.com/docs/angular/lifecycle
+  ionViewDidEnter() {
 
     //Get recipes (From Recipe Service)
     this.recipesList = this.getRecipes();

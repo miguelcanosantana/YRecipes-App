@@ -27,6 +27,11 @@
 
 /*Custom App Colors*/
 :root {
+
+  //Transparent ion-list background
+  .item, .list, .item-content, .item-complex {
+    --ion-background-color: transparent !important;
+  }
   
   //Space Between elemments
   .space {
