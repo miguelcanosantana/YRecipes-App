@@ -1,9 +1,10 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "io.miguelcanosantana.yrecipes",
   "appName": "YRecipes",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
+  "linuxAndroidStudioPath": "/home/tide/Portables/android-studio/bin/studio.sh",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0

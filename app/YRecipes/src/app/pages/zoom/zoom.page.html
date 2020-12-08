@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab1" color="light"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button color="warning" fill="solid" shape="round">
+        <ion-icon name="share-social"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Title -->
+  <ion-item class="customInput" lines="none" color="tertiary">
+    <ion-label class="ion-text-center">{{ this.title }}</ion-label>
+  </ion-item>
+
+  <div class="space"></div>
+
+  <!-- Image -->
+  <ion-item class="customInput" lines="none" color="tertiary">
+    <img class="zoomedImg" src="{{ this.image }}" alt="">
+  </ion-item>
+
+  <div class="space"></div>
+
+  <!-- Recipe Content -->
+  <ion-item class="customInput" lines="none" color="tertiary">
+    <ion-textarea class="content" [readonly]="isReadonly()" [(ngModel)]="this.content" rows="48"></ion-textarea>
+  </ion-item>
+
+</ion-content>

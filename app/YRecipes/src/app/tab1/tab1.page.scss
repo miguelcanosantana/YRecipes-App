@@ -1,0 +1,45 @@
+body {
+    background-color: #8C847D;
+}
+
+ion-card {
+    border-radius: 15px;
+
+}
+
+.cardIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.veggieIcon {
+    margin-bottom: -3px;
+}
+
+.cardTitle {
+    text-align: center;
+    margin-top: -24px;
+}
+
+.cardImage {
+    border-radius: 10px;
+}
+
+ion-col .bottomIcons {
+    text-align: center;
+}
+
+.timeIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.doneIcon {
+    width: 23px;
+    height: 23px;
+}
+
+
+.buttonWithIcon {
+    --border-radius: 20px;
+}

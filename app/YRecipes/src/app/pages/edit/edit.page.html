@@ -2,18 +2,16 @@
   <ion-toolbar color="primary">
 
     <ion-buttons slot="start">
-      <ion-button (click)="this.clearInput()" color="light" fill="clear" shape="round">
-        Clear
-      </ion-button>
+      <ion-back-button defaultHref="tabs/tab1" color="light"></ion-back-button>
     </ion-buttons>
     
     <ion-buttons slot="end">
-      <ion-button (click)="this.saveRecipe()" color="warning" fill="solid" shape="round">
-        Save!
+      <ion-button (click)="this.updateRecipe()" color="warning" fill="solid" shape="round">
+        Go
       </ion-button>
     </ion-buttons>
 
-    <ion-title class="ion-text-center">Add Recipe</ion-title>
+    <ion-title class="ion-text-center">Update Recipe</ion-title>
   </ion-toolbar>
 </ion-header>
 

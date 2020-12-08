@@ -1,17 +1,158 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">YRecipes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col size="12" size-sm="6" size-md="4" size-lg="3" *ngFor="let r of recipesList">
+        <div>
+
+          <ion-card color="tertiary">
+            <ion-card-header>
+              <ion-card-subtitle>
+            
+              </ion-card-subtitle>
+
+              <ion-card-title>
+
+
+                <!-- Veggie Icon -->
+                <ng-container *ngIf="r.plantBased == 0">
+                  <ion-icon class="cardIcon veggieIcon" name="fish"></ion-icon>
+                </ng-container>
+
+                <ng-container *ngIf="r.plantBased == 1">
+                  <ion-icon class="cardIcon veggieIcon" name="leaf"></ion-icon>
+                </ng-container>
+
+                <ng-container *ngIf="r.plantBased == 2">
+                  <ion-icon class="cardIcon veggieIcon" name="leaf"></ion-icon>
+                  <ion-icon class="cardIcon veggieIcon" name="leaf"></ion-icon>
+                </ng-container>
+
+                <div class="cardTitle">{{ r.name }}</div>
+                
+              </ion-card-title>
+
+            </ion-card-header>
+
+            <ion-card-content>
+              <img class="cardImage customInput" (click)="goZoom(r.id)" src="{{r.image}}" alt="">
+
+              <!-- Card Info + Buttons -->
+              <ion-grid>
+                <ion-row>
+
+                  <!-- Time Icon-->
+                  <ion-col size="4" class="bottomIcons">
+                    <ion-icon class="cardIcon timeIcon" name="time"> </ion-icon>
+
+                    <ng-container *ngIf="r.estimatedTime == null">
+                      <br>
+                      ? <br>
+                      Time
+                    </ng-container>
+      
+                    <ng-container *ngIf="r.estimatedTime != null">
+                      <br>
+                      {{ r.estimatedTime }} <br>
+                      Minutes
+                    </ng-container>
+
+                  </ion-col>
+
+                  <!-- Difficulty Icon-->
+                  <ion-col size="4" class="bottomIcons">
+                    <ion-icon class="cardIcon" name="speedometer"></ion-icon>
+
+                    <ng-container *ngIf="r.difficulty == null">
+                      <br>
+                      ? <br>
+                      Difficulty
+                    </ng-container>
+      
+                    <ng-container *ngIf="r.difficulty == 0">
+                      <br>
+                      Easy <br>
+                      Difficulty
+                    </ng-container>
+
+                    <ng-container *ngIf="r.difficulty == 1">
+                      <br>
+                      Normal <br>
+                      Difficulty
+                    </ng-container>
+
+                    <ng-container *ngIf="r.difficulty == 2">
+                      <br>
+                      Hard <br>
+                      Difficulty
+                    </ng-container>
+
+                  </ion-col>
+
+                  <!-- Done Before? -->
+                  <ion-col size="4" class="bottomIcons">
+      
+                    <ng-container *ngIf="r.timesDone == 0">
+                      <ion-icon class="cardIcon doneIcon" name="close-circle"></ion-icon>
+                      <br>
+                      Never <br>
+                      Done
+                    </ng-container>
+
+                    <ng-container *ngIf="r.timesDone != 0">
+                      <ion-icon class="cardIcon doneIcon" name="checkmark-circle"></ion-icon>
+                      <br>
+                      {{ r.timesDone }}<br>
+                      Done
+                      
+                    </ng-container>
+
+                  </ion-col>
+
+                  <!-- Delete Button -->
+                  <ion-col size="12" size-sm="4" class="bottomIcons">
+                    <ion-button (click)="this.deleteAlert(r.id, r.name)" color="danger" class="buttonWithIcon" expand="block">
+                      <ion-icon class="cardIcon" slot="icon-only" name="trash"></ion-icon>
+                    </ion-button>
+                  </ion-col>
+
+                  <!-- Edit Button -->
+                  <ion-col size="12" size-sm="4" class="bottomIcons">
+                    <ion-button (click)="goEdit(r.id)" color="warning" class="buttonWithIcon" expand="block">
+                      <ion-icon class="cardIcon" slot="icon-only" name="create"></ion-icon>
+                    </ion-button>
+                  </ion-col>
+
+                  <!-- Done Button -->
+                  <ion-col size="12" size-sm="4" class="bottomIcons">
+                    <ion-button (click)="this.doneAlert(r, r.name)" color="secondary" class="buttonWithIcon" expand="block">
+                      <ion-icon class="cardIcon" slot="icon-only" name="thumbs-up"></ion-icon>
+                    </ion-button>
+                  </ion-col>
+
+                </ion-row>
+              </ion-grid>
+
+            </ion-card-content>
+
+            
+          
+          </ion-card>
+          
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!-- 
+  {{ recipesList | json }}
+  -->
 </ion-content>
