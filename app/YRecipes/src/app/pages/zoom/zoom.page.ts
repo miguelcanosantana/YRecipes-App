@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Recipe } from 'src/app/model/recipe';
 import { RecipeService } from 'src/app/services/recipe.service';
+import { Plugins} from '@capacitor/core';
+const { Clipboard } = Plugins;
+
 
 @Component({
   selector: 'app-zoom',
@@ -17,7 +20,6 @@ export class ZoomPage implements OnInit {
   content: String;
 
   constructor(
-    private router: Router,
     private activatedRoute: ActivatedRoute,
     private recipeServ: RecipeService
   ) { }
