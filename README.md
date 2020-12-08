@@ -17,6 +17,8 @@
   </p>
 </p>
 
+<br>
+<br>
 
 <!-- ABOUT THE App -->
 ## About The Project
