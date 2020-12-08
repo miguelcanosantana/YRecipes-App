@@ -11,7 +11,7 @@
   <br>
 
   <p align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://youtu.be/sUtslldt2G4">View Video</a>
     ·
     <a href="https://github.com/miguelcanosantana/YRecipes-App/issues">Report Bug</a>
   </p>
