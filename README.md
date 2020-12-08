@@ -18,10 +18,10 @@
 </p>
 
 
-<!-- ABOUT THE PROJECT -->
+<!-- ABOUT THE App -->
 ## About The Project
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+This App is made in Ionic, it allows you to:
+* Create and Edit Recipes.
+* Set the time spent making them, the difficulty, if they are plant based.
+* Track how much of them you did.
+* Have a Chef Score to motivate you! :D.
