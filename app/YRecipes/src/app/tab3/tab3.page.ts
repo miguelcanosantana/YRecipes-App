@@ -36,10 +36,10 @@ export class Tab3Page {
       else scoreToBeAdded *= tempRecp.timesDone;
 
       this.exp += scoreToBeAdded; 
-
-      this.calculateLevel();
       
     }
+
+    this.calculateLevel();
 
   }
 
